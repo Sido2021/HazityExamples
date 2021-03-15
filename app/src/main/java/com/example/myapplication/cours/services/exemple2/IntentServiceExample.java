@@ -1,33 +1,46 @@
 package com.example.myapplication.cours.services.exemple2;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.SystemClock;
+import android.util.Log;
 import android.widget.Toast;
 
-public class IntentServiceExample extends Service {
-    public IntentServiceExample() {
+import androidx.annotation.NonNull;
+import androidx.core.app.JobIntentService;
+
+public class IntentServiceExample extends JobIntentService {
+    static final int JOB_ID = 1000;
+
+    static void enqueueWork(Context context, Intent work) {
+        enqueueWork(context, IntentServiceExample.class, JOB_ID, work);
     }
 
     @Override
-    public void onCreate() {
-        Toast.makeText(this, "Service was created !", Toast.LENGTH_SHORT).show();
-    }
+    protected void onHandleWork(@NonNull Intent intent) {
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
+        toast("Executing work: ");
+        //int code = intent.getIntExtra("code",-1);
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        Toast.makeText(this, "Service started !", Toast.LENGTH_SHORT).show();
-        return START_STICKY;
+        long i = 0 ;
+        while(i < 1000L) i++;
+
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Service destroyed !", Toast.LENGTH_SHORT).show();
+        toast("All work complete");
+    }
+
+    @SuppressWarnings("deprecation")
+    final Handler mHandler = new Handler();
+
+    // Helper for showing tests
+    void toast(final CharSequence text) {
+        mHandler.post(() -> Toast.makeText(IntentServiceExample.this, text, Toast.LENGTH_SHORT).show());
     }
 }

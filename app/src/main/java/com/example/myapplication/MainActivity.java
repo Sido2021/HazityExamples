@@ -5,14 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-import com.example.myapplication.cours.threads.exemple1.Exemple1Activity;
-import com.example.myapplication.cours.threads.exemple2.Exemple2Activity;
-import com.example.myapplication.cours.threads.exemple3.Exemple3Activity;
-import com.example.myapplication.cours.threads.exemple4.Exemple4Activity;
-import com.example.myapplication.cours.threads.exemple5.Exemple5Activity;
-import com.example.myapplication.cours.threads.exemple6.Exemple6Activity;
+import com.example.myapplication.TD.td1.TD1Activity;
+import com.example.myapplication.cours.fragments.exemple1.MainActivityFragment;
+import com.example.myapplication.cours.resources.exemple1.ResourcesExemple1Activity;
+import com.example.myapplication.cours.resources.exemple2.ResourcesExemple2Activity;
+import com.example.myapplication.cours.resources.exemple3.ResourcesExemple3Activity;
+import com.example.myapplication.cours.services.exemple1.ServicesExemple1Activity;
+import com.example.myapplication.cours.services.exemple2.ServicesExemple2Activity;
+import com.example.myapplication.cours.services.exemple3.ServicesExemple3Activity;
+import com.example.myapplication.cours.threads.exemple1.ThreadsExemple1Activity;
+import com.example.myapplication.cours.threads.exemple2.ThreadsExemple2Activity;
+import com.example.myapplication.cours.threads.exemple3.ThreadsExemple3Activity;
+import com.example.myapplication.cours.threads.exemple4.ThreadsExemple4Activity;
+import com.example.myapplication.cours.threads.exemple5.ThreadsExemple5Activity;
+import com.example.myapplication.cours.threads.exemple6.ThreadsExemple6Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,24 +32,46 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         if (v.getId() == R.id.button_thread_exemple1) {
-            startNewActivity(Exemple1Activity.class);
+            startNewActivity(ThreadsExemple1Activity.class);
         } else if (v.getId() == R.id.button_thread_exemple2) {
-            startNewActivity(Exemple2Activity.class);
+            startNewActivity(ThreadsExemple2Activity.class);
         } else if (v.getId() == R.id.button_thread_exemple3) {
-        startNewActivity(Exemple3Activity.class);
+        startNewActivity(ThreadsExemple3Activity.class);
         }
         else if (v.getId() == R.id.button_thread_exemple4) {
-            startNewActivity(Exemple4Activity.class);
+            startNewActivity(ThreadsExemple4Activity.class);
         }
         else if (v.getId() == R.id.button_thread_exemple5) {
-            startNewActivity(Exemple5Activity.class);
+            startNewActivity(ThreadsExemple5Activity.class);
         }
         else if (v.getId() == R.id.button_thread_exemple6) {
-            startNewActivity(Exemple6Activity.class);
+            startNewActivity(ThreadsExemple6Activity.class);
         }
         else if (v.getId() == R.id.button_service_exemple1) {
-            startNewActivity(com.example.myapplication.cours.services.exemple1.Exemple1Activity.class);
+            startNewActivity(ServicesExemple1Activity.class);
         }
+        else if (v.getId() == R.id.button_service_exemple2) {
+            startNewActivity(ServicesExemple2Activity.class);
+        }
+        else if (v.getId() == R.id.button_service_exemple3) {
+            startNewActivity(ServicesExemple3Activity.class);
+        }
+        else if (v.getId() == R.id.button_open_td1) {
+            startNewActivity(TD1Activity.class);
+        }
+        else if (v.getId() == R.id.button_fragment_exemple1) {
+            startNewActivity(MainActivityFragment.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple1) {
+            startNewActivity(ResourcesExemple1Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple2) {
+            startNewActivity(ResourcesExemple2Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple3) {
+            startNewActivity(ResourcesExemple3Activity.class);
+        }
+
     }
 
     private void startNewActivity(Class activity) {

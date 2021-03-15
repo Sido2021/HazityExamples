@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".cours.threads.exemple1.Exemple1Activity">
+    tools:context=".cours.threads.exemple1.ThreadsExemple1Activity">
 
     <ProgressBar
         android:id="@+id/bar_ex1"

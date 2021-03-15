@@ -9,20 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".cours.services.exemple2.Exemple2Activity"></activity>
-        <activity android:name=".cours.services.exemple1.Exemple1Activity" />
+        <activity android:name=".cours.resources.exemple3.ResourcesExemple3Activity"></activity>
+
+        <receiver
+            android:name=".cours.resources.exemple1.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".cours.resources.exemple1.ResourcesExemple1Activity" />
+        <activity android:name=".cours.fragments.exemple1.MainActivityFragment" />
+        <activity android:name=".TD.td2.TD2Activity" />
+        <activity android:name=".TD.td1.TD1Activity" />
+        <activity android:name=".cours.services.exemple3.ServicesExemple3Activity" />
+        <activity android:name=".cours.services.exemple2.ServicesExemple2Activity" />
+        <activity android:name=".cours.services.exemple1.ServicesExemple1Activity" />
 
         <service
             android:name=".cours.services.exemple1.IntentServiceExample"
             android:enabled="true"
             android:exported="true" />
+        <service
+            android:name=".cours.services.exemple2.IntentServiceExample"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".cours.threads.exemple6.Exemple6Activity" />
-        <activity android:name=".cours.threads.exemple5.Exemple5Activity" />
-        <activity android:name=".cours.threads.exemple4.Exemple4Activity" />
-        <activity android:name=".cours.threads.exemple3.Exemple3Activity" />
-        <activity android:name=".cours.threads.exemple2.Exemple2Activity" />
-        <activity android:name=".cours.threads.exemple1.Exemple1Activity" />
+        <activity android:name=".cours.threads.exemple6.ThreadsExemple6Activity" />
+        <activity android:name=".cours.threads.exemple5.ThreadsExemple5Activity" />
+        <activity android:name=".cours.threads.exemple4.ThreadsExemple4Activity" />
+        <activity android:name=".cours.threads.exemple3.ThreadsExemple3Activity" />
+        <activity android:name=".cours.threads.exemple2.ThreadsExemple2Activity" />
+        <activity android:name=".cours.threads.exemple1.ThreadsExemple1Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

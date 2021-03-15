@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".cours.threads.exemple2.Exemple2Activity">
+    tools:context=".cours.threads.exemple2.ThreadsExemple2Activity">
 
     <TextView
         android:id="@+id/text_view_thread_ex2"
