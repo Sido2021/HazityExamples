@@ -1,9 +1,13 @@
 package com.example.myapplication.TD.td1;
 
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.example.myapplication.R;
 
@@ -12,6 +16,16 @@ public class MyThread implements Runnable{
     ProgressBar bar ;
     int nomber ;
     int count = 5;
+
+    Handler handler = new Handler(Looper.myLooper()){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            int i = msg.what;
+            int p = bar.getProgress() ;
+            bar.setProgress(++p);
+        }
+    };
+
     public MyThread(TextView textView ,ProgressBar bar , int nomber){
         this.textView = textView;
         this.bar= bar ;
@@ -20,38 +34,28 @@ public class MyThread implements Runnable{
     @Override
     public void run() {
         String primaries = "hello";
-        /*for(int i=2;i< nomber ;i++){
+        for(int i=2;i< nomber ;i++){
             if(isPrimaryNomber(i)){
-                int p = bar.getProgress() ;
-                bar.setProgress(++p);
                 primaries+= i+",";
-                count++;
-            }
-
-        }*/
-
-        Handler handler1 = new Handler();
-        for (int a = 1; a<10;a++) {
-            int c = a;
-            handler1.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    bar.setProgress(c);
+                handler.sendEmptyMessage(0);
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            }, 1000);
+            }
         }
-
         textView.setText(primaries);
 
     }
 
-    /*private boolean isPrimaryNomber(int n) {
+    private boolean isPrimaryNomber(int n) {
         for(int j = 2;j < n;j++){
-            if(nomber%j ==0 ){
+            if(n%j ==0 ){
                 return false;
             }
         }
         return true ;
-    }*/
+    }
 }
 
