@@ -37,7 +37,7 @@ public class TD1Activity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_view_td1);
         Button button  = findViewById(R.id.button_td1);
-         bar = findViewById(R.id.bar_td1);
+        bar = findViewById(R.id.bar_td1);
         EditText editText = findViewById(R.id.edit_text_td1);
 
 
@@ -57,7 +57,7 @@ public class TD1Activity extends AppCompatActivity {
     private  void startThread(){
         Thread thread = new Thread(()->{
             try {
-                for(int i=2;i< number ;i++){
+                for(int i=2;i<= number ;i++){
                     if(isPrimeNumber(i)){
                         Thread.sleep(1000);
                         handler.sendEmptyMessage(i);

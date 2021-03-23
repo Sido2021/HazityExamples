@@ -48,6 +48,7 @@ public class ServicesExemple3Activity extends AppCompatActivity {
             mChannel.setLightColor(Color.BLUE);
             notification_manager.createNotificationChannel(mChannel);
         }
+
         notification_builder = new NotificationCompat.Builder(this,chanel_id);
         notification_builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("Notification Title")
@@ -55,7 +56,6 @@ public class ServicesExemple3Activity extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setContentIntent(contentIntent);
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify(0, notification_builder.build());
+        notification_manager.notify(0, notification_builder.build());
     }
 }

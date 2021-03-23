@@ -7,10 +7,20 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/button_resource_exemple5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="onClick"
+        android:text="@string/exemple5"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple5"
+        app:layout_constraintTop_toTopOf="@+id/button_resource_exemple1" />
+
+    <Button
         android:id="@+id/button_fragment_exemple1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="336dp"
         android:onClick="onClick"
         android:text="@string/fragment_exemples"
         app:layout_constraintStart_toStartOf="@+id/button_thread_exemple4"
@@ -104,6 +114,54 @@
         app:layout_constraintTop_toTopOf="@+id/button_resource_exemple1" />
 
     <Button
+        android:id="@+id/button_resource_exemple8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/exemple8"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple5"
+        app:layout_constraintTop_toBottomOf="@+id/button_resource_exemple5" />
+
+    <Button
+        android:id="@+id/button_resource_exemple9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/exemple_9"
+        app:layout_constraintStart_toStartOf="@+id/button_resource_exemple6"
+        app:layout_constraintTop_toBottomOf="@+id/button_resource_exemple6" />
+
+    <Button
+        android:id="@+id/button_resource_exemple6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="52dp"
+        android:onClick="onClick"
+        android:text="@string/exemple6"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple5"
+        app:layout_constraintTop_toTopOf="@+id/button_resource_exemple1" />
+
+    <Button
+        android:id="@+id/button_resource_exemple7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/exemple7"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple4"
+        app:layout_constraintTop_toBottomOf="@+id/button_resource_exemple4" />
+
+    <Button
+        android:id="@+id/button_resource_exemple4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:onClick="onClick"
+        android:text="@string/exemple4"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple4"
+        app:layout_constraintTop_toBottomOf="@+id/button_thread_exemple4" />
+
+    <Button
         android:id="@+id/button_resource_exemple3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,11 +174,22 @@
         android:id="@+id/button_open_td1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="392dp"
         android:onClick="onClick"
         android:text="@string/td1"
+        app:layout_constraintEnd_toEndOf="@+id/button_thread_exemple4"
         app:layout_constraintStart_toStartOf="@+id/button_thread_exemple4"
         app:layout_constraintTop_toBottomOf="@+id/button_thread_exemple4" />
+
+    <Button
+        android:id="@+id/button_open_td3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/td3"
+        app:layout_constraintBottom_toBottomOf="@+id/button_open_td1"
+        app:layout_constraintEnd_toEndOf="@+id/button_thread_exemple5"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple5" />
 
     <Button
         android:id="@+id/button_service_exemple2"

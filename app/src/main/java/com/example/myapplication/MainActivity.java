@@ -7,10 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.myapplication.TD.td1.TD1Activity;
+import com.example.myapplication.TD.td3.Exercice3Activity;
 import com.example.myapplication.cours.fragments.exemple1.MainActivityFragment;
+import com.example.myapplication.cours.resources.exemple4.ResourcesExemple4Activity;
 import com.example.myapplication.cours.resources.exemple1.ResourcesExemple1Activity;
 import com.example.myapplication.cours.resources.exemple2.ResourcesExemple2Activity;
 import com.example.myapplication.cours.resources.exemple3.ResourcesExemple3Activity;
+import com.example.myapplication.cours.resources.exemple5.ResourcesExemple5Activity;
+import com.example.myapplication.cours.resources.exemple6.ResourcesExemple6Activity;
+import com.example.myapplication.cours.resources.exemple7.ResourcesExemple7Activity;
+import com.example.myapplication.cours.resources.exemple8.MapsActivity;
+import com.example.myapplication.cours.resources.exemple9.ResourcesExemple9Activity;
 import com.example.myapplication.cours.services.exemple1.ServicesExemple1Activity;
 import com.example.myapplication.cours.services.exemple2.ServicesExemple2Activity;
 import com.example.myapplication.cours.services.exemple3.ServicesExemple3Activity;
@@ -70,6 +77,27 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (v.getId() == R.id.button_resource_exemple3) {
             startNewActivity(ResourcesExemple3Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple4) {
+            startNewActivity(ResourcesExemple4Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple5) {
+            startNewActivity(ResourcesExemple5Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple6) {
+            startNewActivity(ResourcesExemple6Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple7) {
+            startNewActivity(ResourcesExemple7Activity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple8) {
+            startNewActivity(MapsActivity.class);
+        }
+        else if (v.getId() == R.id.button_resource_exemple9) {
+            startNewActivity(ResourcesExemple9Activity.class);
+        }
+        else if (v.getId() == R.id.button_open_td3) {
+            startNewActivity(Exercice3Activity.class);
         }
 
     }

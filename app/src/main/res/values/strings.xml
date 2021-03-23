@@ -23,4 +23,16 @@
     <string name="start_video">start video</string>
     <string name="start_audio">start audio</string>
     <string name="stop_audio">stop audio</string>
+    <string name="take">Take</string>
+    <string name="description">description</string>
+    <string name="call">Call</string>
+    <string name="exemple7">exemple 7</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="exemple8">exemple 8</string>
+    <string name="demarage">Demarage</string>
+    <string name="open_map">open map</string>
+    <string name="exemple_9">exemple 9</string>
+    <string name="get_current_time">get current time</string>
+    <string name="td3">td3</string>
+    <string name="login">Login</string>
 </resources>

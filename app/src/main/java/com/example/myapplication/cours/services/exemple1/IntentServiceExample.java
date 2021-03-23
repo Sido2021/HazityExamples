@@ -6,8 +6,7 @@ import android.os.IBinder;
 import android.widget.Toast;
 
 public class IntentServiceExample extends Service {
-    public IntentServiceExample() {
-    }
+    public IntentServiceExample() { }
 
     @Override
     public void onCreate() {
