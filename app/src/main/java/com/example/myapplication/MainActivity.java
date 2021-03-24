@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.myapplication.TD.td1.TD1Activity;
 import com.example.myapplication.TD.td3.Exercice3Activity;
+import com.example.myapplication.TD.td4.TD4Activity;
 import com.example.myapplication.cours.fragments.exemple1.MainActivityFragment;
 import com.example.myapplication.cours.resources.exemple4.ResourcesExemple4Activity;
 import com.example.myapplication.cours.resources.exemple1.ResourcesExemple1Activity;
@@ -98,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (v.getId() == R.id.button_open_td3) {
             startNewActivity(Exercice3Activity.class);
+        }else if (v.getId() == R.id.button_open_td4) {
+            startNewActivity(TD4Activity.class);
         }
 
     }

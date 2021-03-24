@@ -7,38 +7,75 @@
     tools:context=".TD.td4.TD4Activity">
 
     <EditText
-        android:id="@+id/edit_text_cin"
-        android:layout_width="wrap_content"
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="24dp"
+        android:layout_margin="8dp"
         android:ems="10"
+        android:hint="@string/name"
         android:inputType="textPersonName"
-        android:hint="cin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/card_view_td4" />
 
-    <EditText
-        android:id="@+id/edit_text_name"
-        android:layout_width="wrap_content"
+    <CalendarView
+        android:id="@+id/calendar_view_td4"
+        style="@android:style/Widget.Material.CalendarView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="name"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_cin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_cin"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_cin" />
-
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Add"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        android:background="#E6E6E6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="268dp"
+        android:layout_height="51dp"
+        android:layout_margin="8dp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="@+id/calendar_view_td4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/calendar_view_td4"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_view_td4" />
+
+    <ImageButton
+        android:id="@+id/button_open_list"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_view_td4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_td4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view_td4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:layout_editor_absoluteX="139dp"
+            tools:layout_editor_absoluteY="74dp"
+            android:src="@drawable/ic_avatar" />
+
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

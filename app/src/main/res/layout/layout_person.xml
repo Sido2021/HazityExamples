@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_td4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="40dp">
+
+        <ImageView
+            android:id="@+id/image_view_td4_adapter"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/text_view_name_td4_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Name Name"/>
+    <TextView
+        android:id="@+id/text_view_birthdate_td4_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="14dp"
+        android:gravity="end"
+        android:textColor="#9A9A9A"
+        android:layout_gravity="bottom"
+        android:text="20-12-2000"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -21,18 +21,18 @@ import java.util.ArrayList;
 public class ListPersonsActivity extends AppCompatActivity {
 
     ListView listViewPersons ;
+    DataBase db;
+    ArrayList<Person> persons;
+    PersonAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_persons);
 
-        DataBase db = new DataBase(this);
+        db = new DataBase(this);
         listViewPersons = findViewById(R.id.list_view_persons);
 
-        ArrayList<Person> persons = db.getPersons();
-
-        ArrayAdapter<Person> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,persons);
-        listViewPersons.setAdapter(adapter);
+        loadPersons();
 
         listViewPersons.setOnItemClickListener((parent, view, position, id) -> {
             Person p = persons.get(position);
@@ -43,11 +43,19 @@ public class ListPersonsActivity extends AppCompatActivity {
             Fragment fragment=new FragmentPersons();
 
             Bundle bundle = new Bundle();
-            bundle.putSerializable("person",p);
+            bundle.putInt("id",p.id);
 
             fragment.setArguments(bundle);
             tr.replace(R.id.fragment_person,fragment );
             tr.commit();
         });
+    }
+    public void loadPersons(){
+        persons = db.getPersons();
+        adapter = new PersonAdapter(this,persons);
+        listViewPersons.setAdapter(adapter);
+    }
+    public void refreshPersons(){
+        adapter.setPersons(db.getPersons());
     }
 }

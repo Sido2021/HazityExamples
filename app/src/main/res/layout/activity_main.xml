@@ -192,6 +192,17 @@
         app:layout_constraintStart_toStartOf="@+id/button_thread_exemple5" />
 
     <Button
+        android:id="@+id/button_open_td4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/td4"
+        app:layout_constraintBottom_toBottomOf="@+id/button_open_td1"
+        app:layout_constraintEnd_toEndOf="@+id/button_thread_exemple6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button_thread_exemple6" />
+
+    <Button
         android:id="@+id/button_service_exemple2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

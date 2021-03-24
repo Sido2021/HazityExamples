@@ -35,4 +35,9 @@
     <string name="get_current_time">get current time</string>
     <string name="td3">td3</string>
     <string name="login">Login</string>
+    <string name="td4" >td4</string>
+    <string name="todo">TODO</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="name">name</string>
 </resources>
